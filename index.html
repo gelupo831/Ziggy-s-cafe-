@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Unofficial private draft dossier for Ziggy's Cafe in Havelock, North Carolina.">
+<title>Ziggy's Cafe — Havelock, NC (Private draft)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF4E8;
+    --paper:#FFFDF8;
+    --gold:#C4922A;
+    --gold-soft:#E8C878;
+    --green:#2F6B45;
+    --green-deep:#1F4A2F;
+    --choc:#3A2A1F;
+    --ink:#2A1D17;
+    --muted:#8A7862;
+    --line:#E6D7C2;
+    --wash:#F3E6D0;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Nunito Sans', 'Segoe UI', sans-serif;
+    line-height:1.55;
+  }
+  img{max-width:100%; height:auto; display:block;}
+  h1,h2,h3{
+    font-family:'Fraunces', Georgia, serif;
+    color:var(--choc);
+    font-weight:700;
+    line-height:1.15;
+  }
+  a{color:var(--green);}
+  a:hover{color:var(--green-deep);}
+  .wrap{max-width:880px; margin:0 auto; padding:0 24px;}
+  .skip{
+    position:absolute; left:-999px; top:auto; width:1px; height:1px; overflow:hidden;
+  }
+  .skip:focus{
+    left:16px; top:16px; width:auto; height:auto; padding:8px 14px;
+    background:#fff; color:var(--choc); z-index:20; border-radius:8px;
+  }
+
+  .draft-banner{
+    background:var(--green-deep);
+    color:#F3EDE3;
+    font-size:0.88rem;
+    font-weight:600;
+    text-align:center;
+    padding:10px 16px;
+  }
+  .draft-banner strong{color:#fff;}
+
+  /* HERO */
+  .hero{
+    background:var(--choc);
+    color:var(--cream);
+    padding:64px 24px 52px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute;
+    top:-120px; right:-80px;
+    width:320px; height:320px;
+    background:var(--green);
+    border-radius:50%;
+    opacity:0.28;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    bottom:-150px; left:-90px;
+    width:300px; height:300px;
+    background:var(--gold);
+    border-radius:50%;
+    opacity:0.2;
+  }
+  .hero-inner{position:relative; z-index:1;}
+  .eyebrow{
+    font-size:0.95rem;
+    color:var(--gold-soft);
+    font-weight:800;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  .hero h1{
+    font-size:clamp(2.5rem, 7vw, 4rem);
+    color:#fff;
+  }
+  .hero p.sub{
+    margin-top:16px;
+    font-size:1.15rem;
+    max-width:46ch;
+    color:#EFE3D6;
+  }
+  .hero-stats{
+    display:flex;
+    gap:32px;
+    margin-top:36px;
+    flex-wrap:wrap;
+  }
+  .stat .num{
+    font-family:'Fraunces', Georgia, serif;
+    font-size:2.4rem;
+    color:var(--gold-soft);
+    line-height:1;
+  }
+  .stat .lbl{
+    font-size:0.9rem;
+    color:#C9BAAA;
+    margin-top:4px;
+  }
+
+  .photo-strip{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:4px;
+    background:var(--choc);
+  }
+  .photo-strip a,
+  .photo-strip img{
+    width:100%;
+    height:140px;
+    object-fit:cover;
+    display:block;
+  }
+  .photo-strip a{height:auto;}
+
+  nav.page-nav{
+    background:var(--paper);
+    border-bottom:1px solid var(--line);
+    position:sticky;
+    top:0;
+    z-index:8;
+  }
+  nav.page-nav .wrap{
+    display:flex;
+    gap:8px 18px;
+    flex-wrap:wrap;
+    padding:12px 24px;
+  }
+  nav.page-nav a{
+    color:var(--choc);
+    text-decoration:none;
+    font-weight:700;
+    font-size:0.92rem;
+  }
+  nav.page-nav a:hover{color:var(--green);}
+
+  .info{padding:56px 0;}
+  .info-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:36px;
+  }
+  .card h3{
+    font-size:1.35rem;
+    margin-bottom:14px;
+    border-bottom:2px solid var(--gold);
+    display:inline-block;
+    padding-bottom:4px;
+  }
+  .field{margin-bottom:14px;}
+  .field .k{font-weight:800; color:var(--green); font-size:0.82rem; letter-spacing:0.04em;}
+  .field .v{font-size:1.05rem;}
+  .hours-table{width:100%; border-collapse:collapse; margin-top:4px;}
+  .hours-table td{padding:5px 0; font-size:1rem;}
+  .hours-table td:first-child{color:var(--choc); font-weight:600; width:42%;}
+  .cta{
+    display:inline-block;
+    margin:8px 10px 0 0;
+    background:var(--green);
+    color:#fff;
+    padding:12px 22px;
+    border-radius:999px;
+    font-weight:800;
+    text-decoration:none;
+    font-size:0.95rem;
+  }
+  .cta:hover{background:var(--green-deep); color:#fff;}
+  .cta.secondary{
+    background:transparent;
+    color:var(--green-deep);
+    border:2px solid var(--green);
+  }
+  .cta.secondary:hover{background:var(--green); color:#fff;}
+
+  .mentions{padding:8px 0 56px;}
+  .mentions h2, .gallery-sec h2, .menu-sec h2, .reviews h2, .about h2, .visit-sec h2{
+    font-size:1.85rem;
+    margin-bottom:10px;
+  }
+  .note{color:var(--muted); margin-bottom:22px; font-size:0.95rem; max-width:62ch;}
+  .tag-row{display:flex; flex-wrap:wrap; gap:10px;}
+  .tag{
+    background:var(--green);
+    color:#fff;
+    padding:8px 16px;
+    border-radius:999px;
+    font-size:0.92rem;
+    font-weight:600;
+  }
+
+  .gallery-sec{padding:8px 0 24px;}
+  .gallery-block{margin:0 0 40px;}
+  .gallery-block h3{
+    font-size:1.25rem;
+    margin:0 0 14px;
+    color:var(--green-deep);
+  }
+  .gallery{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:10px;
+  }
+  .gallery a{
+    display:block;
+    background:#fff;
+    border-radius:8px;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    border:1px solid var(--line);
+  }
+  .gallery img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    background:#ddd;
+  }
+  .gallery figcaption{
+    font-size:0.82rem;
+    color:var(--muted);
+    padding:8px 10px 10px;
+    line-height:1.35;
+  }
+
+  .menu-sec{
+    background:var(--wash);
+    padding:56px 0;
+  }
+  .menu-sec .wrap{max-width:880px;}
+  .menu-group{
+    background:var(--paper);
+    border-radius:10px;
+    padding:22px 24px 10px;
+    margin:0 0 18px;
+    border:1px solid var(--line);
+  }
+  .menu-group h3{
+    font-size:1.25rem;
+    margin-bottom:6px;
+    color:var(--green-deep);
+  }
+  .menu-group .serve{
+    color:var(--muted);
+    font-size:0.9rem;
+    margin-bottom:12px;
+  }
+  button.menu-item{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:8px 16px;
+    padding:12px 10px;
+    margin:0 -10px;
+    width:calc(100% + 20px);
+    border:0;
+    border-top:1px solid var(--line);
+    border-radius:0;
+    background:transparent;
+    font:inherit;
+    color:inherit;
+    text-align:left;
+    cursor:pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  button.menu-item:first-of-type{border-top:none;}
+  button.menu-item:hover{
+    background:#F4EFE6;
+  }
+  button.menu-item:focus-visible{
+    background:#F4EFE6;
+    box-shadow:inset 0 0 0 2px var(--green);
+    border-radius:8px;
+    outline:none;
+  }
+  .menu-item .name{font-weight:800; color:var(--choc);}
+  .menu-item .desc{font-size:0.92rem; color:#5C4C3D; grid-column:1 / -1; margin-top:-4px;}
+  .menu-item .price{
+    font-weight:800;
+    color:var(--green-deep);
+    white-space:nowrap;
+  }
+  .menu-item .price::after{
+    content:" \203A";
+    font-weight:600;
+    color:var(--green);
+    opacity:0.7;
+  }
+
+  .dish-modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(20,12,8,0.72);
+    z-index:50;
+    padding:16px;
+    overflow:auto;
+    align-items:center;
+    justify-content:center;
+  }
+  .dish-modal.open{display:flex;}
+  .dish-card{
+    position:relative;
+    background:#FBF6EE;
+    color:var(--ink);
+    border-radius:14px;
+    max-width:640px;
+    width:100%;
+    margin:auto;
+    padding:20px 22px 26px;
+    box-shadow:0 16px 48px rgba(20,12,8,0.35);
+    max-height:calc(100vh - 32px);
+    overflow:auto;
+    border:1px solid var(--line);
+  }
+  .dish-close{
+    position:sticky;
+    top:0;
+    float:right;
+    width:44px;
+    height:44px;
+    margin:-8px -8px 0 8px;
+    border:0;
+    border-radius:50%;
+    background:#EFE3D6;
+    color:var(--choc);
+    font-size:1.6rem;
+    line-height:1;
+    cursor:pointer;
+    z-index:1;
+  }
+  .dish-close:hover,
+  .dish-close:focus-visible{
+    background:var(--green);
+    color:#fff;
+    outline:none;
+  }
+  .dish-card h3{
+    font-size:1.55rem;
+    margin:4px 48px 4px 0;
+    color:var(--choc);
+  }
+  .dish-card .dish-price{
+    font-weight:800;
+    color:var(--green-deep);
+    font-size:1.15rem;
+    margin-bottom:14px;
+  }
+  .dish-media{margin:0 0 16px;}
+  .dish-media img{
+    display:block;
+    width:100%;
+    max-height:50vh;
+    object-fit:contain;
+    background:#EDE4D6;
+    border-radius:10px;
+    margin:0 0 10px;
+  }
+  .dish-placeholder{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    min-height:200px;
+    padding:28px 16px;
+    border-radius:10px;
+    background:linear-gradient(180deg, #F4EFE6 0%, #E8DFD0 100%);
+    border:1px dashed #C4B8A4;
+    color:var(--green-deep);
+    text-align:center;
+  }
+  .dish-placeholder svg{width:92px; height:68px;}
+  .dish-placeholder p{
+    margin:0;
+    font-weight:800;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    font-size:0.82rem;
+    color:var(--green-deep);
+  }
+  .dish-blurb{
+    font-size:1.02rem;
+    line-height:1.55;
+    color:var(--choc);
+  }
+  .dish-caveat{
+    margin-top:14px;
+    background:#fff7e0;
+    border-left:4px solid var(--gold);
+    padding:10px 12px;
+    border-radius:4px;
+    font-size:0.9rem;
+    color:#5C4C3D;
+  }
+  .caveat{
+    background:#fff7e0;
+    border-left:4px solid var(--gold);
+    padding:14px 16px;
+    border-radius:4px;
+    margin:0 0 22px;
+    font-size:0.95rem;
+  }
+
+  .reviews{padding:56px 0;}
+  .review-list{display:flex; flex-direction:column; gap:16px;}
+  .review{
+    background:#fff;
+    border-left:4px solid var(--green);
+    padding:18px 22px;
+    border-radius:4px;
+    font-size:1.02rem;
+    color:var(--choc);
+  }
+  .review::before{
+    content:"“";
+    font-family:'Fraunces', Georgia, serif;
+    color:var(--green);
+    font-size:1.6rem;
+    line-height:0;
+    display:block;
+    margin-bottom:6px;
+  }
+  .review .src{
+    display:block;
+    margin-top:8px;
+    font-size:0.82rem;
+    color:var(--muted);
+  }
+
+  .about{
+    background:var(--wash);
+    padding:56px 0;
+  }
+  .about p{margin-bottom:14px; max-width:62ch;}
+
+  .visit-sec{padding:56px 0 72px;}
+  .map-frame{
+    width:100%;
+    height:320px;
+    border:0;
+    border-radius:10px;
+    margin-top:8px;
+    background:var(--line);
+  }
+
+  footer{
+    background:var(--choc);
+    color:#C9BAAA;
+    padding:36px 24px 48px;
+    font-size:0.88rem;
+    line-height:1.55;
+  }
+  footer .wrap{max-width:880px;}
+  footer h2{
+    color:#fff;
+    font-size:1.15rem;
+    margin-bottom:10px;
+  }
+  footer a{color:var(--gold-soft);}
+  footer ul{margin:8px 0 16px 18px;}
+  footer li{margin:4px 0;}
+
+  /* lightbox */
+  .lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(20,12,8,0.92);
+    z-index:40;
+    padding:24px 16px;
+    overflow:auto;
+  }
+  .lightbox.open{display:flex; flex-direction:column; align-items:center; justify-content:center;}
+  .lightbox img{
+    max-width:min(960px, 100%);
+    max-height:82vh;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+    border-radius:6px;
+  }
+  .lightbox p{
+    color:#EFE3D6;
+    margin-top:12px;
+    max-width:60ch;
+    text-align:center;
+  }
+  .lightbox button{
+    position:absolute;
+    top:12px; right:16px;
+    background:transparent;
+    border:0;
+    color:#fff;
+    font-size:2rem;
+    cursor:pointer;
+    line-height:1;
+  }
+
+  @media (max-width:700px){
+    .info-grid{grid-template-columns:1fr;}
+    .gallery{grid-template-columns:repeat(2, 1fr);}
+    .gallery img{height:160px;}
+    .photo-strip{grid-template-columns:repeat(3, 1fr);}
+    .photo-strip a:nth-child(4),
+    .photo-strip a:nth-child(5){display:none;}
+    .hero{padding:48px 20px 40px;}
+  }
+  @media (max-width:420px){
+    .gallery{grid-template-columns:1fr;}
+    .gallery img{height:220px;}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="draft-banner">Unofficial <strong>private draft</strong> — for preview only. Photos are third-party and are not cleared for public publishing.</div>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="eyebrow">Westbrooke Shopping Center · Havelock, North Carolina</div>
+    <h1>Ziggy's Cafe</h1>
+    <p class="sub">A small, busy breakfast-and-lunch diner known for pancakes, omelets, home fries, and stacked sandwiches — cooked to order.</p>
+    <div class="hero-stats">
+      <div class="stat"><div class="num">4.6</div><div class="lbl">★ Google rating</div></div>
+      <div class="stat"><div class="num">679</div><div class="lbl">Google reviews</div></div>
+      <div class="stat"><div class="num">$</div><div class="lbl">price level</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="photo-strip" aria-hidden="false">
+  <a href="photos/page/exterior/rj-uvIsnoxYBM.jpg" class="zoom" data-cap="Storefront close-up with the hanging Ziggy’s Cafe sign and address 462"><img src="photos/page/exterior/rj-uvIsnoxYBM.jpg" alt="Ziggy's Cafe storefront sign and address 462"></a>
+  <a href="photos/page/food/rj-RVV4Xo4gzc.jpg" class="zoom" data-cap="Belgian waffle with berries, whipped cream, and sausage"><img src="photos/page/food/rj-RVV4Xo4gzc.jpg" alt="Belgian waffle with berries and whipped cream"></a>
+  <a href="photos/page/food/rj-1np26S39h0.jpg" class="zoom" data-cap="Omelette plate with toast and diced home fries"><img src="photos/page/food/rj-1np26S39h0.jpg" alt="Omelette with toast and home fries"></a>
+  <a href="photos/page/interior/rj-GxKcXOLZWG.jpg" class="zoom" data-cap="Dining room with wood tables, orange chairs, and the framed chalkboard"><img src="photos/page/interior/rj-GxKcXOLZWG.jpg" alt="Ziggy's Cafe dining room"></a>
+  <a href="photos/page/food/rj-GlSguM8B74.jpg" class="zoom" data-cap="Cheeseburger with waffle fries"><img src="photos/page/food/rj-GlSguM8B74.jpg" alt="Cheeseburger and waffle fries"></a>
+</div>
+
+<nav class="page-nav" aria-label="Page sections">
+  <div class="wrap">
+    <a href="#visit">Visit</a>
+    <a href="#known">Known for</a>
+    <a href="#photos">Photos</a>
+    <a href="#menu">Menu</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#about">About</a>
+    <a href="#find">Map</a>
+  </div>
+</nav>
+
+<main id="main">
+<section class="info" id="visit">
+  <div class="wrap info-grid">
+    <div class="card">
+      <h3>Visit</h3>
+      <div class="field">
+        <div class="k">ADDRESS</div>
+        <div class="v">462 U.S. Hwy 70 W<br>Westbrooke Shopping Center<br>Havelock, NC 28532</div>
+      </div>
+      <div class="field">
+        <div class="k">PHONE</div>
+        <div class="v"><a href="tel:+12524474746">(252) 447-4746</a></div>
+      </div>
+      <div class="field">
+        <div class="k">NOTES</div>
+        <div class="v">Call ahead for carry-out. Visa, Mastercard, and debit accepted. All items are cooked to order.</div>
+      </div>
+      <a class="cta" href="https://maps.google.com/?cid=7585696979546156148" target="_blank" rel="noopener">Get directions</a>
+      <a class="cta secondary" href="https://www.facebook.com/pages/Ziggys-Cafe/139853909395542" target="_blank" rel="noopener">Facebook page</a>
+    </div>
+    <div class="card">
+      <h3>Hours</h3>
+      <table class="hours-table">
+        <tr><td>Monday</td><td>6:00 AM – 3:00 PM</td></tr>
+        <tr><td>Tuesday</td><td>6:00 AM – 3:00 PM</td></tr>
+        <tr><td>Wednesday</td><td>6:00 AM – 3:00 PM</td></tr>
+        <tr><td>Thursday</td><td>6:00 AM – 3:00 PM</td></tr>
+        <tr><td>Friday</td><td>6:00 AM – 3:00 PM</td></tr>
+        <tr><td>Saturday</td><td>6:00 AM – 2:00 PM</td></tr>
+        <tr><td>Sunday</td><td>7:00 AM – 2:00 PM</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="mentions" id="known">
+  <div class="wrap">
+    <h2>Known for</h2>
+    <p class="note">Favorites mentioned in Google reviews and on the printed menu.</p>
+    <div class="tag-row">
+      <span class="tag">Pancakes</span>
+      <span class="tag">Omelets</span>
+      <span class="tag">Crispy home fries</span>
+      <span class="tag">Corned-beef hash</span>
+      <span class="tag">Neese’s sausage gravy</span>
+      <span class="tag">Belgian waffles</span>
+      <span class="tag">The Reuben</span>
+      <span class="tag">The Pilgrim</span>
+      <span class="tag">Breakfast burritos</span>
+      <span class="tag">Cooked to order</span>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-sec" id="photos">
+  <div class="wrap">
+    <h2>Photos</h2>
+    <p class="note">Sorted from publicly posted restaurant photos. They belong to the people who took them and are included here only for this private draft. Tap a photo to enlarge it.</p>
+
+    <div class="gallery-block">
+      <h3>Food</h3>
+      <div class="gallery">
+        <a class="zoom" href="photos/page/food/rj-1np26S39h0.jpg" data-cap="Omelette plate with toast and diced home fries"><figure><img src="photos/page/food/rj-1np26S39h0.jpg" alt="Omelette plate with toast and diced home fries"><figcaption>Omelette with toast and home fries</figcaption></figure></a>
+        <a class="zoom" href="photos/page/food/rj-6Q0lUAt71u.jpg" data-cap="Two breakfast plates with eggs, bacon, pancakes, and potatoes"><figure><img src="photos/page/food/rj-6Q0lUAt71u.jpg" alt="Two breakfast plates with eggs, bacon, pancakes, and potatoes"><figcaption>Eggs, bacon, pancakes, and potatoes</figcaption></figure></a>
+        <a class="zoom" href="photos/page/food/rj-RVV4Xo4gzc.jpg" data-cap="Belgian waffle with berries, whipped cream, and sausage"><figure><img src="photos/page/food/rj-RVV4Xo4gzc.jpg" alt="Belgian waffle with berries, whipped cream, and sausage"><figcaption>Belgian waffle with berries</figcaption></figure></a>
+        <a class="zoom" href="photos/page/food/rj-h1iSJhFOmt.jpg" data-cap="Breakfast plate with eggs, bacon, toast, and fruit"><figure><img src="photos/page/food/rj-h1iSJhFOmt.jpg" alt="Breakfast plate with eggs, bacon, toast, and fruit"><figcaption>Breakfast with fruit</figcaption></figure></a>
+        <a class="zoom" href="photos/page/food/rj-EWt82QzUeV.jpg" data-cap="Sunny-side eggs over crispy hash browns"><figure><img src="photos/page/food/rj-EWt82QzUeV.jpg" alt="Sunny-side eggs over crispy hash browns"><figcaption>Eggs over hash browns</figcaption></figure></a>
+        <a class="zoom" href="photos/page/food/rj-7PePl0PuCb.jpg" data-cap="Close-up of crispy diced home fries"><figure><img src="photos/page/food/rj-7PePl0PuCb.jpg" alt="Close-up of crispy diced home fries"><figcaption>Crispy diced home fries</figcaption></figure></a>
+        <a class="zoom" href="photos/page/food/rj-NEvtVykRq2.jpg" data-cap="Breakfast sandwich on Texas toast"><figure><img src="photos/page/food/rj-NEvtVykRq2.jpg" alt="Breakfast sandwich on Texas toast"><figcaption>Texas-toast breakfast sandwich</figcaption></figure></a>
+        <a class="zoom" href="photos/page/food/rj-H9FrP42VWu.jpg" data-cap="Two breakfast burritos with salsa"><figure><img src="photos/page/food/rj-H9FrP42VWu.jpg" alt="Two breakfast burritos with salsa"><figcaption>Breakfast burritos</figcaption></figure></a>
+        <a class="zoom" href="photos/page/food/rj-dOKB6cKLKz.jpg" data-cap="Chili or corned-beef hash with eggs and pancakes"><figure><img src="photos/page/food/rj-dOKB6cKLKz.jpg" alt="Chili or corned-beef hash with eggs and pancakes"><figcaption>Hash with eggs and pancakes</figcaption></figure></a>
+        <a class="zoom" href="photos/page/food/rj-GlSguM8B74.jpg" data-cap="Cheeseburger with waffle fries"><figure><img src="photos/page/food/rj-GlSguM8B74.jpg" alt="Cheeseburger with waffle fries"><figcaption>Cheeseburger and waffle fries</figcaption></figure></a>
+        <a class="zoom" href="photos/page/food/rj-SSdNH3yE7V.jpg" data-cap="Fried chicken sandwich and waffle fries"><figure><img src="photos/page/food/rj-SSdNH3yE7V.jpg" alt="Fried chicken sandwich and waffle fries"><figcaption>Chicken sandwich</figcaption></figure></a>
+        <a class="zoom" href="photos/page/food/rj-0IHFIuo1RO.jpg" data-cap="Fried tenders with waffle fries, coleslaw, and tartar sauce"><figure><img src="photos/page/food/rj-0IHFIuo1RO.jpg" alt="Fried tenders with waffle fries, coleslaw, and tartar sauce"><figcaption>Tenders, slaw, and fries</figcaption></figure></a>
+        <a class="zoom" href="photos/page/food/rj-8VX0OaNwel.jpg" data-cap="Quesadilla with waffle fries, salsa, and jalapeños"><figure><img src="photos/page/food/rj-8VX0OaNwel.jpg" alt="Quesadilla with waffle fries, salsa, and jalapeños"><figcaption>Quesadilla and fries</figcaption></figure></a>
+        <a class="zoom" href="photos/page/food/rj-MBE8aKN8lA.jpg" data-cap="Whipped-cream hot chocolate in a Ziggy’s Cafe mug"><figure><img src="photos/page/food/rj-MBE8aKN8lA.jpg" alt="Whipped-cream hot chocolate in a Ziggy’s Cafe mug"><figcaption>Hot chocolate in a logo mug</figcaption></figure></a>
+      </div>
+    </div>
+
+    <div class="gallery-block">
+      <h3>Menu</h3>
+      <div class="gallery">
+        <a class="zoom" href="photos/page/menu/rj-A6GKVhaLeh.jpg" data-cap="Current menu: Mexican Style, From the Griddle, and Breakfast Sandwiches"><figure><img src="photos/page/menu/rj-A6GKVhaLeh.jpg" alt="Current menu page for Mexican Style, griddle items, and breakfast sandwiches"><figcaption>Current: Mexican Style &amp; griddle</figcaption></figure></a>
+        <a class="zoom" href="photos/page/menu/rj-jaN4ZPLohp.jpg" data-cap="Current menu: Chicken, Burgers, and Sub Sandwiches"><figure><img src="photos/page/menu/rj-jaN4ZPLohp.jpg" alt="Current menu page for chicken, burgers, and sub sandwiches"><figcaption>Current: chicken, burgers, subs</figcaption></figure></a>
+        <a class="zoom" href="photos/page/menu/rj-rNAb46KAE8.jpg" data-cap="Current menu: Salads, Soups and Chili, and Beverages"><figure><img src="photos/page/menu/rj-rNAb46KAE8.jpg" alt="Current menu page for salads, soups, chili, and beverages"><figcaption>Current: salads, soups, drinks</figcaption></figure></a>
+        <a class="zoom" href="photos/page/menu/rj-eJvZuO6DTb.jpg" data-cap="Chalkboard specials on the dining-room wall"><figure><img src="photos/page/menu/rj-eJvZuO6DTb.jpg" alt="Framed chalkboard of daily specials"><figcaption>Wall specials board (undated)</figcaption></figure></a>
+        <a class="zoom" href="photos/page/menu/rj-FJrGTdtMB7.jpg" data-cap="Chalkboard special: New Breakfast Bowl, $7.95"><figure><img src="photos/page/menu/rj-FJrGTdtMB7.jpg" alt="Chalkboard advertising a $7.95 breakfast bowl"><figcaption>Breakfast Bowl special (undated)</figcaption></figure></a>
+        <a class="zoom" href="photos/page/menu/sirved-6329b99392d33.jpg" data-cap="Older menu page: Home Style Breakfast and stuffed omelets (prices may be outdated)"><figure><img src="photos/page/menu/sirved-6329b99392d33.jpg" alt="Older menu page for home-style breakfast and stuffed omelets"><figcaption>Older: breakfast &amp; omelets</figcaption></figure></a>
+        <a class="zoom" href="photos/page/menu/sirved-6329b99268cd5.jpg" data-cap="Older, cropped Melts menu page (prices may be outdated)"><figure><img src="photos/page/menu/sirved-6329b99268cd5.jpg" alt="Older, cropped menu page for melts"><figcaption>Older: melts (cropped)</figcaption></figure></a>
+      </div>
+    </div>
+
+    <div class="gallery-block">
+      <h3>Interior</h3>
+      <div class="gallery">
+        <a class="zoom" href="photos/page/interior/rj-GxKcXOLZWG.jpg" data-cap="Dining room with wood tables, orange chairs, and the framed chalkboard"><figure><img src="photos/page/interior/rj-GxKcXOLZWG.jpg" alt="Dining room with wood tables and orange chairs"><figcaption>Dining room</figcaption></figure></a>
+        <a class="zoom" href="photos/page/interior/rj-MndgKQZDwp.jpg" data-cap="Framed chalkboard wall and empty tables"><figure><img src="photos/page/interior/rj-MndgKQZDwp.jpg" alt="Framed chalkboard wall and empty tables"><figcaption>Specials wall</figcaption></figure></a>
+        <a class="zoom" href="photos/page/interior/ta-06275553-ziggy-s.jpg" data-cap="Dining room looking toward the specials chalkboard"><figure><img src="photos/page/interior/ta-06275553-ziggy-s.jpg" alt="Dining room looking toward the specials chalkboard"><figcaption>Toward the chalkboard</figcaption></figure></a>
+        <a class="zoom" href="photos/page/interior/rj-usXmjdPMzR.jpg" data-cap="Table setting with logo mugs, condiments, and open menus"><figure><img src="photos/page/interior/rj-usXmjdPMzR.jpg" alt="Table setting with logo mugs and open menus"><figcaption>Table setting</figcaption></figure></a>
+        <a class="zoom" href="photos/page/interior/rj-4EOp9LCiI4.jpg" data-cap="Logo table-tent with hours, phone, and Westbrooke Shopping Center"><figure><img src="photos/page/interior/rj-4EOp9LCiI4.jpg" alt="Ziggy's Cafe logo table-tent with hours and phone number"><figcaption>Hours table-tent</figcaption></figure></a>
+        <a class="zoom" href="photos/page/interior/rj-vjmIb1Lv1j.jpg" data-cap="Close-up of the green coffee-cup logo on a Ziggy’s Cafe mug"><figure><img src="photos/page/interior/rj-vjmIb1Lv1j.jpg" alt="Close-up of the Ziggy's Cafe coffee-cup logo on a mug"><figcaption>Logo mug</figcaption></figure></a>
+      </div>
+    </div>
+
+    <div class="gallery-block">
+      <h3>Exterior</h3>
+      <div class="gallery">
+        <a class="zoom" href="photos/page/exterior/rj-uvIsnoxYBM.jpg" data-cap="Storefront close-up with the hanging Ziggy’s Cafe sign and address 462"><figure><img src="photos/page/exterior/rj-uvIsnoxYBM.jpg" alt="Storefront close-up with hanging sign and address 462"><figcaption>Sign and address 462</figcaption></figure></a>
+        <a class="zoom" href="photos/page/exterior/rj-C83e68LTC3.jpg" data-cap="Westbrooke strip-mall facade and Ziggy’s Cafe sign"><figure><img src="photos/page/exterior/rj-C83e68LTC3.jpg" alt="Westbrooke strip-mall facade and Ziggy's Cafe sign"><figcaption>Plaza facade</figcaption></figure></a>
+        <a class="zoom" href="photos/page/exterior/rj-18UzneOpBd.jpg" data-cap="Storefront and parking lot"><figure><img src="photos/page/exterior/rj-18UzneOpBd.jpg" alt="Ziggy's Cafe storefront and parking lot"><figcaption>From the parking lot</figcaption></figure></a>
+        <a class="zoom" href="photos/page/exterior/rj-Z681IGBgNo.jpg" data-cap="Storefront with parking in front of the brick plaza"><figure><img src="photos/page/exterior/rj-Z681IGBgNo.jpg" alt="Storefront with parking in front of the brick plaza"><figcaption>End unit of the plaza</figcaption></figure></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu-sec" id="menu">
+  <div class="wrap">
+    <h2>On the menu</h2>
+    <p class="note">Transcribed from customer-uploaded menu photos on November 24, 2026. This is not an official menu. Confirm prices with the cafe before you go. Tap or click any item for a closer look — with a photo when we have a confident match, or a short description and a placeholder if we don’t.</p>
+    <div class="caveat"><strong>Price caveat:</strong> The Mexican Style, griddle, breakfast sandwich, chicken, burger, sub, salad, soup, and beverage prices below come from the clearer, more recent printed pages. Home Style Breakfast, stuffed omelets, and melts were only found on older photos with lower prices — those sections are marked and may be out of date. Chalkboard specials change.</div>
+
+    <div class="menu-group">
+      <h3>Mexican Style</h3>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="photos/page/food/rj-H9FrP42VWu.jpg" data-alts="Breakfast burritos with cups of house salsa at Ziggy&#x27;s Cafe" data-blurb="A hearty breakfast wrap filled with two eggs, shredded hash browns, cheddar cheese, and your choice of ham, bacon, or sausage, with house-made salsa on the side. The photo shows the burritos served with salsa cups."><span class="name">Breakfast Burrito</span><span class="price">$11.95</span><span class="desc">Two eggs, shredded hash browns, cheddar cheese, and ham, bacon, or sausage, with home-made salsa on the side.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A cheddar omelet stuffed with ham, onions, and diced green chili peppers, served with house salsa and your choice of shredded hash browns, home fries, or grits, plus toast, a biscuit, or pancakes."><span class="name">Spanish Omelet</span><span class="price">$13.00</span><span class="desc">Cheddar, ham, onions, and diced green chili peppers, with salsa and hash browns, home fries, or grits, plus toast, biscuit, or pancakes.</span></button>
+    </div>
+
+    <div class="menu-group">
+      <h3>From the Griddle</h3>
+      <p class="serve">Add strawberries or blueberries for $2.25. Add whipped cream for $0.99.</p>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="photos/page/food/rj-6Q0lUAt71u.jpg|photos/page/food/rj-f3z8dq0gNI.jpg" data-alts="Stacks of pancakes on a breakfast table at Ziggy&#x27;s Cafe, with other breakfast plates|A short stack of pancakes served as part of a breakfast plate at Ziggy&#x27;s Cafe" data-blurb="Two fluffy pancakes served with your choice of bacon, ham, or sausage (patties or links). Strawberries or blueberries can be added for $2.25, and whipped cream for $0.99. One photo also shows pancakes alongside a country-fried breakfast plate."><span class="name">Pancake Breakfast</span><span class="price">$9.35</span><span class="desc">Two pancakes with bacon, ham, or sausage (patties or links).</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="Three thick slices of Texas toast dipped in house batter and griddled until golden, served with your choice of bacon, ham, or sausage. Strawberries or blueberries can be added for $2.25, and whipped cream for $0.99."><span class="name">Texas Style French Toast</span><span class="price">$10.90</span><span class="desc">Three thick slices of Texas toast in house batter, with bacon, ham, or sausage.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="photos/page/food/rj-RVV4Xo4gzc.jpg" data-alts="Belgian waffle topped with berries and whipped cream, with sausage, at Ziggy&#x27;s Cafe" data-blurb="One large Belgian waffle served with bacon, ham, or sausage. Fruit can be added for $2.25 and whipped cream for $0.99; the photo shows a waffle topped with berries and whipped cream, with sausage on the side."><span class="name">Belgian Waffle Breakfast</span><span class="price">$9.80</span><span class="desc">One large Belgian waffle with bacon, ham, or sausage.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="photos/page/food/rj-EWt82QzUeV.jpg" data-alts="White sausage gravy spooned over hash browns at Ziggy&#x27;s Cafe" data-blurb="White gravy made with Neese’s sausage, served on a biscuit, hash browns, or toast. The photo shows the gravy spooned generously over hash browns."><span class="name">Home Made Sausage Gravy</span><span class="price">$6.25</span><span class="desc">White gravy made with Neese’s sausage, on a biscuit, hash browns, or toast.</span></button>
+    </div>
+
+    <div class="menu-group">
+      <h3>Breakfast Sandwiches</h3>
+      <p class="serve">Add shredded hash browns, diced home fries, or grits for $3.25.</p>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="photos/page/food/rj-NEvtVykRq2.jpg" data-alts="Ham, egg, and cheese on grilled Texas toast at Ziggy&#x27;s Cafe" data-blurb="Bacon, ham, or sausage with egg and American cheese on Texas toast. The photo shows a ham, egg, and cheese version on griddled Texas toast. Hash browns, home fries, or grits can be added for $3.25."><span class="name">Meat, Egg &amp; Cheese</span><span class="price">$7.55</span><span class="desc">Bacon, ham, or sausage with egg and American cheese on Texas toast.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="Country ham, egg, and American cheese on Texas toast — a saltier, traditional ham breakfast sandwich. Hash browns, home fries, or grits can be added for $3.25."><span class="name">Country Ham, Egg &amp; Cheese</span><span class="price">$7.55</span><span class="desc">Country ham, egg, and American cheese on Texas toast.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A simple breakfast sandwich of fried egg and American cheese on Texas toast. Hash browns, home fries, or grits can be added for $3.25."><span class="name">Egg &amp; Cheese</span><span class="price">$6.50</span><span class="desc">Fried egg and American cheese on Texas toast.</span></button>
+    </div>
+
+    <div class="menu-group">
+      <h3>Chicken</h3>
+      <p class="serve">Served with mashed potatoes or French fries.</p>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A grilled chicken breast sandwich on grilled sourdough, stacked with bacon, grilled onions, mushrooms, tomato, and cheese."><span class="name">Anwich</span><span class="price">$12.75</span><span class="desc">Grilled chicken breast, bacon, grilled onions, mushrooms, tomato, and cheese on grilled sourdough.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A club-style sub with chicken tenders, cheese, bacon, lettuce, tomato, and mayo on a toasted sub roll."><span class="name">Chicken Fried Club</span><span class="price">$12.50</span><span class="desc">Chicken tenders, cheese, bacon, lettuce, tomato, and mayo on a toasted sub roll.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A grilled chicken sandwich with cheese, lettuce, tomato, and mayo on a bun."><span class="name">Grilled Chicken Breast</span><span class="price">$11.50</span><span class="desc">Grilled chicken, cheese, lettuce, tomato, and mayo on a bun.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A plate of four home-style premium chicken tenders — a straightforward diner plate of crispy tenders."><span class="name">Chicken Tender Plate</span><span class="price">$12.50</span><span class="desc">Four home-style premium chicken tenders.</span></button>
+    </div>
+
+    <div class="menu-group">
+      <h3>Burgers</h3>
+      <p class="serve">Served with mashed potatoes or French fries.</p>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="photos/page/food/rj-YMpXTgeAyr.jpg" data-alts="Double cheeseburger with lettuce, tomato, and waffle fries at Ziggy&#x27;s Cafe" data-blurb="Two quarter-pound beef patties with cheese, lettuce, tomato, and mayo. The photo shows the double cheeseburger served with waffle fries."><span class="name">Al’s Double Cheese Burger</span><span class="price">$12.50</span><span class="desc">Two 1/4 lb. beef patties, cheese, lettuce, tomato, and mayo.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="photos/page/food/rj-GlSguM8B74.jpg" data-alts="Quarter-pound cheeseburger with lettuce, tomato, and waffle fries at Ziggy&#x27;s Cafe" data-blurb="A quarter-pound beef patty with American cheese, lettuce, tomato, and mayo. The photo shows the single cheeseburger served with waffle fries."><span class="name">1/4 lb. Cheeseburger</span><span class="price">$10.99</span><span class="desc">1/4 lb. beef patty with American cheese, lettuce, tomato, and mayo.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A quarter-pound burger topped with Swiss cheese, bacon, and mushrooms, plus lettuce, tomato, and mayo."><span class="name">Bacon Mushroom Swiss Burger</span><span class="price">$12.50</span><span class="desc">1/4 lb. patty with Swiss, bacon, mushrooms, lettuce, tomato, and mayo.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A quarter-pound burger with Swiss cheese, mushrooms, and brown gravy — a diner-style gravy burger."><span class="name">Mushroom Gravy Swiss Burger</span><span class="price">$11.99</span><span class="desc">1/4 lb. patty with Swiss cheese, mushrooms, and brown gravy.</span></button>
+    </div>
+
+    <div class="menu-group">
+      <h3>Sub Sandwiches</h3>
+      <p class="serve">Served with mashed potatoes or French fries. Add chili and cheese to fries for $3.99.</p>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A hearty sub of steak, cheese, bacon, grilled onions, and mushrooms on a garlic-toasted sub roll."><span class="name">Steak &amp; Bacon</span><span class="price">$14.75</span><span class="desc">Steak, cheese, bacon, grilled onions, and mushrooms on a garlic toasted sub roll.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="Thin-sliced sirloin with bell peppers, onions, mushrooms, and white cheese on a toasted sub roll."><span class="name">Philly Cheese Steak</span><span class="price">$13.75</span><span class="desc">Thin-sliced sirloin, bell peppers, onions, mushrooms, and white cheese on a toasted sub roll.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A 6-ounce grilled ribeye steak on a toasted sub roll, finished with lettuce, tomato, and mayo."><span class="name">Ribeye Sub</span><span class="price">$15.50</span><span class="desc">6 oz. grilled ribeye with lettuce, tomato, and mayo on a toasted sub roll.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="Shredded corned beef with sauerkraut and thousand-island dressing on grilled marble rye."><span class="name">Reuben Sandwich</span><span class="price">$12.99</span><span class="desc">Shredded corned beef, sauerkraut, and thousand-island dressing on grilled marble rye.</span></button>
+    </div>
+
+    <div class="menu-group">
+      <h3>Salads, soups &amp; chili</h3>
+      <p class="serve">Dressings: ranch, Italian, or honey mustard. Soups served October through March only. 12 oz. bowls.</p>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="Your choice of chicken salad or tuna salad, served on a bed of lettuce and sliced tomatoes — a lighter lunch plate without a sandwich bun."><span class="name">Chicken or Tuna Salad Cold Plate</span><span class="price">$10.50</span><span class="desc">On a bed of lettuce and sliced tomatoes.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A classic diner chef salad: lettuce, tomato, bell peppers, and onions, topped with ham, turkey, and shredded cheese."><span class="name">Chef Salad</span><span class="price">$10.50</span><span class="desc">Lettuce, tomato, bell peppers, and onions with ham, turkey, and shredded cheese.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A simple garden salad of lettuce, tomatoes, bell peppers, and onions, topped with shredded cheese."><span class="name">Garden Salad</span><span class="price">$8.25</span><span class="desc">Lettuce, tomatoes, bell peppers, and onions topped with shredded cheese.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="Grilled chicken breast served over lettuce, tomatoes, peppers, and onions, with shredded cheese on top."><span class="name">Grilled Chicken Salad</span><span class="price">$10.50</span><span class="desc">Grilled chicken breast, lettuce, tomatoes, peppers, and onions with shredded cheese.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="photos/page/food/rj-8EZxnabECb.jpg" data-alts="A bowl of creamy soup served with packets of saltine crackers at Ziggy&#x27;s Cafe" data-blurb="A bowl of soup served with crackers. A grilled cheese sandwich can be added for $1.50. The soup of the day can vary; the photo shows a creamy bowl with saltines."><span class="name">Soup with crackers</span><span class="price">$7.50</span><span class="desc">Add a grilled cheese sandwich for $1.50.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A bowl of house chili served with crackers. A grilled cheese sandwich can be added for $1.50."><span class="name">Chili with crackers</span><span class="price">$7.50</span><span class="desc">Add a grilled cheese sandwich for $1.50.</span></button>
+    </div>
+
+    <div class="menu-group">
+      <h3>Beverages</h3>
+      <p class="serve">Free refills on coffee, iced tea, and sodas only.</p>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A cup of regular or decaf coffee — a diner brew meant to sip with breakfast or lunch."><span class="name">Coffee (regular or decaf)</span><span class="price">$2.25</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="Hot tea or a glass of iced tea."><span class="name">Hot tea or iced tea</span><span class="price">$2.50</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="photos/page/food/rj-MBE8aKN8lA.jpg" data-alts="Ziggy&#x27;s Cafe mug of hot chocolate topped with whipped cream and a candy cane" data-blurb="A mug of hot chocolate. The photo shows it in a logo cup, topped with whipped cream and a candy cane."><span class="name">Hot chocolate</span><span class="price">$2.50</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A glass of regular or chocolate milk."><span class="name">Milk (regular or chocolate)</span><span class="price">$2.50</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A fountain drink: Pepsi, Diet Pepsi, Dr Pepper, Sierra Mist, Mountain Dew, or lemonade."><span class="name">Soda</span><span class="price">$2.75</span><span class="desc">Pepsi, Diet Pepsi, Dr Pepper, Sierra Mist, Mountain Dew, or lemonade.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A glass of orange or apple juice."><span class="name">Juice (orange or apple)</span><span class="price">$2.50</span></button>
+    </div>
+
+    <div class="menu-group">
+      <h3>Home Style Breakfast <span style="font-family:'Nunito Sans',sans-serif;font-size:0.7em;font-weight:800;color:#8A7862;letter-spacing:0.04em;">OLDER PHOTO — PRICES MAY BE OUTDATED</span></h3>
+      <p class="serve">Served with shredded hash browns, diced home fries, or grits, and toast, biscuit, or pancakes. Additional egg $1.25. Transcribed from an older menu photo; current prices may be higher.</p>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="photos/page/food/rj-h1iSJhFOmt.jpg|photos/page/food/rj-iEKrxk7v5s.jpg" data-alts="Eggs, bacon, home fries, and toast — Ziggy&#x27;s Country Breakfast|Sunny-side eggs, bacon, hash browns, and toast at Ziggy&#x27;s Cafe" data-blurb="Two eggs cooked to order with bacon, ham, or sausage, plus shredded hash browns, home fries, or grits, and toast, a biscuit, or pancakes. The photos show eggs and bacon with potatoes and toast." data-caveat="Price comes from an older menu photo and may be out of date. Confirm with the cafe before you go."><span class="name">Ziggy’s Country Breakfast</span><span class="price">$8.75*</span><span class="desc">Two eggs cooked to order with bacon, ham, or sausage.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A 6-ounce ribeye served with two eggs cooked to order, plus hash browns, home fries, or grits, and toast, a biscuit, or pancakes." data-caveat="Price comes from an older menu photo and may be out of date. Confirm with the cafe before you go."><span class="name">Steak &amp; Eggs</span><span class="price">$12.50*</span><span class="desc">6 oz. ribeye with two eggs cooked to order.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="Two eggs cooked the way you like them — over easy, sunny side up, scrambled, and so on — with hash browns, home fries, or grits, and toast, a biscuit, or pancakes." data-caveat="Price comes from an older menu photo and may be out of date. Confirm with the cafe before you go."><span class="name">Two Eggs Any Style</span><span class="price">$6.25*</span><span class="desc">Over easy, sunny side up, scrambled, and so on.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="Two eggs any style with your choice of country ham or corned-beef hash, plus hash browns, home fries, or grits, and toast, a biscuit, or pancakes." data-caveat="Price comes from an older menu photo and may be out of date. Confirm with the cafe before you go."><span class="name">Country Ham or Corned Beef Hash</span><span class="price">$9.75*</span><span class="desc">Two eggs any style with corned-beef hash or country ham.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="An 8-ounce hamburger steak served with two eggs, plus hash browns, home fries, or grits, and toast, a biscuit, or pancakes." data-caveat="Price comes from an older menu photo and may be out of date. Confirm with the cafe before you go."><span class="name">Hamburger Steak &amp; Eggs</span><span class="price">$9.99*</span><span class="desc">Two eggs with an 8 oz. hamburger steak.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="photos/page/food/rj-6Q0lUAt71u.jpg" data-alts="Bone-in pork chop with scrambled eggs and hash browns, shown with other breakfast plates at Ziggy&#x27;s Cafe" data-blurb="A thick-cut, bone-in grilled pork chop with two eggs, plus hash browns, home fries, or grits, and toast, a biscuit, or pancakes. In the photo, the pork chop plate sits in front of other breakfast plates." data-caveat="Price comes from an older menu photo and may be out of date. Confirm with the cafe before you go."><span class="name">Pork Chop &amp; Eggs</span><span class="price">$9.99*</span><span class="desc">Thick-cut, bone-in grilled pork chop with two eggs.</span></button>
+    </div>
+
+    <div class="menu-group">
+      <h3>Ziggy’s Stuffed Omelets <span style="font-family:'Nunito Sans',sans-serif;font-size:0.7em;font-weight:800;color:#8A7862;letter-spacing:0.04em;">OLDER PHOTO — PRICES MAY BE OUTDATED</span></h3>
+      <p class="serve">Two XL-egg omelets with hash browns, home fries, or grits, and toast, biscuit, or pancakes. Additional eggs $1.25. From the same older photo.</p>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A two-XL-egg omelet filled with ham, onions, bell peppers, tomatoes, and cheese, served with hash browns, home fries, or grits, and toast, a biscuit, or pancakes." data-caveat="Price comes from an older menu photo and may be out of date. Confirm with the cafe before you go."><span class="name">Western Omelet</span><span class="price">$9.25*</span><span class="desc">Ham, onions, bell peppers, tomatoes, and cheese.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A stuffed omelet filled with ground beef, bacon, mushrooms, tomato, onions, and cheese, served with hash browns, home fries, or grits, and toast, a biscuit, or pancakes." data-caveat="Price comes from an older menu photo and may be out of date. Confirm with the cafe before you go."><span class="name">Bacon Cheeseburger</span><span class="price">$10.50*</span><span class="desc">Ground beef, bacon, mushrooms, tomato, onions, and cheese.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A two-XL-egg omelet filled with ham, onions, and bell peppers, with no cheese, served with hash browns, home fries, or grits, and toast, a biscuit, or pancakes." data-caveat="Price comes from an older menu photo and may be out of date. Confirm with the cafe before you go."><span class="name">Denver Omelet</span><span class="price">$8.50*</span><span class="desc">Ham, onions, and bell peppers (no cheese).</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A stuffed omelet with thin-sliced sirloin, bell peppers, onion, mushrooms, and cheese, served with hash browns, home fries, or grits, and toast, a biscuit, or pancakes." data-caveat="Price comes from an older menu photo and may be out of date. Confirm with the cafe before you go."><span class="name">Philly Steak Omelet</span><span class="price">$9.50*</span><span class="desc">Thin-sliced sirloin, bell peppers, onion, mushrooms, and cheese.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A simple two-XL-egg omelet filled with cheddar cheese, served with hash browns, home fries, or grits, and toast, a biscuit, or pancakes." data-caveat="Price comes from an older menu photo and may be out of date. Confirm with the cafe before you go."><span class="name">Cheese Omelet</span><span class="price">$8.25*</span><span class="desc">Filled with cheddar cheese.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="photos/page/food/rj-dOKB6cKLKz.jpg" data-alts="Chili and cheddar omelet with hash browns and biscuits at Ziggy&#x27;s Cafe" data-blurb="A cheddar omelet covered with house chili, served with hash browns, home fries, or grits, and toast, a biscuit, or pancakes. The photo shows it smothered in chili and cheddar, with hash browns and biscuits on the side." data-caveat="Price comes from an older menu photo and may be out of date. Confirm with the cafe before you go."><span class="name">Chili &amp; Cheese</span><span class="price">$9.75*</span><span class="desc">Cheddar omelet covered with house chili.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A cheddar omelet filled with bell peppers, onions, mushrooms, and tomatoes, served with hash browns, home fries, or grits, and toast, a biscuit, or pancakes." data-caveat="Price comes from an older menu photo and may be out of date. Confirm with the cafe before you go."><span class="name">Vegetable &amp; Cheese</span><span class="price">$9.25*</span><span class="desc">Bell peppers, onions, mushrooms, tomatoes, and cheddar.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A cheddar omelet with your choice of bacon, sausage, or ham, served with hash browns, home fries, or grits, and toast, a biscuit, or pancakes." data-caveat="Price comes from an older menu photo and may be out of date. Confirm with the cafe before you go."><span class="name">Meat &amp; Cheese</span><span class="price">$9.25*</span><span class="desc">Cheddar and bacon, sausage, or ham.</span></button>
+    </div>
+
+    <div class="menu-group">
+      <h3>Melts <span style="font-family:'Nunito Sans',sans-serif;font-size:0.7em;font-weight:800;color:#8A7862;letter-spacing:0.04em;">OLDER PHOTO — PRICES MAY BE OUTDATED</span></h3>
+      <p class="serve">Served with mashed potatoes, French fries, or chips. From a cropped older photo. The Pilgrim and Poorboy appear as titles; descriptions and prices were cut off. Reviews mention The Pilgrim as turkey on sourdough with home fries.</p>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="House tuna salad with tomato and cheese, grilled on marble rye, and served with mashed potatoes, French fries, or chips." data-caveat="Price comes from an older menu photo and may be out of date. Confirm with the cafe before you go."><span class="name">Tuna Melt</span><span class="price">$8.75*</span><span class="desc">House tuna salad with tomato and cheese on grilled marble rye.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A quarter-pound burger with cheese and grilled onions on grilled marble rye, served with mashed potatoes, French fries, or chips." data-caveat="Price comes from an older menu photo and may be out of date. Confirm with the cafe before you go."><span class="name">Patty Melt</span><span class="price">$7.99*</span><span class="desc">1/4 lb. burger with cheese and grilled onions on grilled marble rye.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A sandwich listed on the older melts card. The printed description was cut off in the photo we have. Guests have described The Pilgrim as turkey on sourdough, often with home fries. Melts are served with mashed potatoes, French fries, or chips." data-caveat="This item is listed on an older, cropped menu photo. The printed description and price were not visible. Confirm with the cafe."><span class="name">The Pilgrim</span><span class="price">—</span><span class="desc">Listed on the older card; price not visible in the photo.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A sandwich listed on the older melts card. The filling and price were not visible in the photo we have, so ask the cafe what’s in it. Melts are served with mashed potatoes, French fries, or chips." data-caveat="This item is listed on an older, cropped menu photo. The printed description and price were not visible. Confirm with the cafe."><span class="name">Poorboy</span><span class="price">—</span><span class="desc">Listed on the older card; price not visible in the photo.</span></button>
+    </div>
+
+    <div class="menu-group">
+      <h3>Chalkboard specials</h3>
+      <p class="serve">Undated boards photographed in the dining room. These change — call ahead.</p>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A breakfast bowl with your choice of meat, grits, cheese, and gravy." data-caveat="This was listed as a chalkboard special and may change. Confirm with the cafe before you go."><span class="name">Breakfast Bowl</span><span class="price">$7.95</span><span class="desc">Choice of meat, grits, cheese, and gravy.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="photos/page/food/rj-f3z8dq0gNI.jpg" data-alts="Country-fried cutlet with white gravy, scrambled eggs, hash browns, and pancakes at Ziggy&#x27;s Cafe" data-blurb="A country-fried chicken or steak breakfast from the specials board. The photo shows a breaded cutlet with white gravy, scrambled eggs, hash browns, and a side of pancakes." data-caveat="This was listed as a chalkboard special and may change. Confirm with the cafe before you go."><span class="name">Country Fried Chicken or Steak Breakfast</span><span class="price">$11.99</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A slice of limoncello cheesecake from the dessert specials board — a creamy cheesecake with a bright lemon-liqueur flavor." data-caveat="This was listed as a chalkboard special and may change. Confirm with the cafe before you go."><span class="name">Limoncello Cheesecake</span><span class="price">$5.49</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="A classic diner hot dog served with French fries. Chili and cheese can be added for $0.99." data-caveat="This was listed as a chalkboard special and may change. Confirm with the cafe before you go."><span class="name">Hot Dogs with Fries</span><span class="price">$6.50</span><span class="desc">Add chili and cheese for $0.99.</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="photos/page/food/rj-8VX0OaNwel.jpg" data-alts="Chicken quesadilla wedges with waffle fries, salsa, sour cream, and jalapeños at Ziggy&#x27;s Cafe" data-blurb="Chicken quesadillas from the specials board. The photo shows toasted wedges served with waffle fries, salsa, sour cream, and jalapeños." data-caveat="This was listed as a chalkboard special and may change. Confirm with the cafe before you go."><span class="name">Chicken Quesadillas</span><span class="price">$9.50</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="An omelette from the specials board. A guest review called it delicious and mentioned crispy hash browns alongside it. Ask the cafe for today’s filling, since the chalkboard did not list the ingredients." data-caveat="This was listed as a chalkboard special and may change. Confirm with the cafe before you go."><span class="name">Hawaiian Omelette</span><span class="price">$12.50</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="Chicken tenders tossed in buffalo-style sauce, served with fries." data-caveat="This was listed as a chalkboard special and may change. Confirm with the cafe before you go."><span class="name">Buffalo Tenders with Fries</span><span class="price">$12.50</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="" data-alts="" data-blurb="Buffalo-style chicken tenders wrapped up and served with fries." data-caveat="This was listed as a chalkboard special and may change. Confirm with the cafe before you go."><span class="name">Buffalo Tender Wrap with Fries</span><span class="price">$9.99</span></button>
+      <button type="button" class="menu-item" aria-haspopup="dialog" data-photos="photos/page/food/rj-SSdNH3yE7V.jpg" data-alts="Fried chicken sandwich with bacon and waffle fries at Ziggy&#x27;s Cafe" data-blurb="A fried chicken sandwich with Swiss cheese and bacon, served with fries. The photo shows a breaded chicken sandwich with bacon and lettuce, and a side of waffle fries." data-caveat="This was listed as a chalkboard special and may change. Confirm with the cafe before you go."><span class="name">Fried Chicken Sandwich</span><span class="price">$12.50</span><span class="desc">With Swiss cheese and bacon, and fries.</span></button>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <h2>What people are saying</h2>
+    <p class="note">Quoted from the Google Maps listing as of September 7, 2026. The live listing was still 4.6 stars from 679 reviews on November 24, 2026. Some later reviews on other sites are more mixed, including a few critical TripAdvisor write-ups.</p>
+    <div class="review-list">
+      <div class="review">This is a great place for a quick, home-cooked breakfast or lunch! Very friendly staff. The inside is a little small and fills up with regulars, but they’re very accommodating.<span class="src">Google review</span></div>
+      <div class="review">The place is simple, clean, welcoming, and unassuming. The service is superb and the food is fantastic! Natasha was our server and she’s wonderful. The eggs were excellent. The ham was tasty. The hash browns were crispy. The pancakes were perfect.<span class="src">Google review</span></div>
+      <div class="review">Some of the best pancakes I’ve had in NC. All the breakfast food was delicious, but the pancakes were gigantic and amazing. Service was 5-star even though they were completely packed.<span class="src">Google review</span></div>
+      <div class="review">I have the pleasure of working right next door. If you’re looking for next-level sandwiches, Ziggy’s takes it to perfection — golden, crispy crust, cooked just right.<span class="src">Google review</span></div>
+      <div class="review">Good food, friendly staff. The Hawaiian omelette was delicious, the hash browns were nice and crispy, and the waffle was toasty and good. Excellent value for the price.<span class="src">Google review</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <h2>A little context</h2>
+    <p>Ziggy’s Cafe is a long-running breakfast and lunch diner in Westbrooke Shopping Center on U.S. Highway 70 in Havelock, near Marine Corps Air Station Cherry Point. The room is small and often busy with regulars, especially on weekend mornings. There is a covered walkway out front, and the printed table-tent asks guests to call ahead for carry-out.</p>
+    <p>In a December 20, 2025 WITN story about the new U.S. 70 bypass, cafe employee Rebecca Kronenberg said the staff had heard of other bypassed towns drying up, but they were staying optimistic that business would continue.</p>
+    <p>This page is an unofficial dossier drafted from public listings and photos. It is not the cafe’s website, and the cafe has not reviewed it.</p>
+  </div>
+</section>
+
+<section class="visit-sec" id="find">
+  <div class="wrap">
+    <h2>Find us</h2>
+    <p class="note">462 U.S. Hwy 70 W, Havelock, NC 28532 · <a href="tel:+12524474746">(252) 447-4746</a></p>
+    <iframe class="map-frame" title="Map to Ziggy's Cafe in Havelock, NC" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=462+U.S.+Hwy+70+W,+Havelock,+NC+28532&amp;output=embed"></iframe>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <h2>Unofficial private draft</h2>
+    <p>This is not an official website for Ziggy’s Cafe. It was compiled as a private preview on November 24, 2026, from public listings. Listing details (address, phone, hours, 4.6 stars from 679 Google reviews, and $ price level) were rechecked against Google Maps that day.</p>
+    <p style="margin-top:12px"><strong>Photos are third-party and are not cleared for public publishing.</strong> They were copied from Restaurantji, TripAdvisor, and Sirved (some of which republish Google Maps photos). Copyright stays with the photographers and those sites. Do not treat this page as licensed or public-ready. A few photos of identifiable people were left out of the galleries.</p>
+    <p style="margin-top:12px">Sources:</p>
+    <ul>
+      <li>Google Maps — <a href="https://maps.google.com/?cid=7585696979546156148" rel="noopener">maps.google.com/?cid=7585696979546156148</a></li>
+      <li>Restaurantji — <a href="https://www.restaurantji.com/nc/havelock/ziggys-cafe-/" rel="noopener">restaurantji.com/nc/havelock/ziggys-cafe-/</a></li>
+      <li>TripAdvisor — <a href="https://www.tripadvisor.com/Restaurant_Review-g49201-d2396958-Reviews-Ziggy_s_Cafe-Havelock_North_Carolina.html" rel="noopener">Ziggy’s Cafe listing</a></li>
+      <li>Sirved menu photos — <a href="https://www.sirved.com/restaurant/havelock-north_carolina-usa/ziggys-cafe/828983/menus" rel="noopener">sirved.com menu page</a></li>
+      <li>Facebook (the website listed on Google) — <a href="https://www.facebook.com/pages/Ziggys-Cafe/139853909395542" rel="noopener">Ziggys-Cafe page</a></li>
+      <li>WITN, December 20, 2025 — <a href="https://www.witn.com/2025/12/20/havelock-bypass-complete-residents-split-its-impacts/" rel="noopener">Havelock bypass story</a></li>
+    </ul>
+    <p>Menu prices transcribed from photos. Older omelet, melt, and home-style breakfast prices may no longer be current.</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo">
+  <button type="button" id="lightbox-close" aria-label="Close">&times;</button>
+  <img id="lightbox-img" alt="">
+  <p id="lightbox-cap"></p>
+</div>
+
+<div class="dish-modal" id="dish-modal" role="dialog" aria-modal="true" aria-labelledby="dish-title" aria-hidden="true">
+  <div class="dish-card" id="dish-card" role="document">
+    <button type="button" class="dish-close" id="dish-close" aria-label="Close">&times;</button>
+    <h3 id="dish-title"></h3>
+    <div class="dish-price" id="dish-price"></div>
+    <div class="dish-media" id="dish-media"></div>
+    <p class="dish-blurb" id="dish-blurb"></p>
+    <p class="dish-caveat" id="dish-caveat" hidden></p>
+  </div>
+</div>
+<template id="dish-placeholder-tpl">
+  <div class="dish-placeholder" role="img" aria-label="Photo coming soon">
+    <svg viewBox="0 0 120 88" fill="none" aria-hidden="true">
+      <ellipse cx="60" cy="62" rx="44" ry="16" stroke="#2F5D3A" stroke-width="2.2"/>
+      <ellipse cx="60" cy="60" rx="30" ry="9" stroke="#C4A35A" stroke-width="1.6"/>
+      <path d="M22 58C22 30 98 30 98 58" stroke="#2F5D3A" stroke-width="2.2"/>
+      <circle cx="60" cy="24" r="4.5" stroke="#C4A35A" stroke-width="2"/>
+      <path d="M60 28.5V34" stroke="#C4A35A" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <p>Photo coming soon</p>
+  </div>
+</template>
+<script>
+(function(){
+  var box = document.getElementById('lightbox');
+  var img = document.getElementById('lightbox-img');
+  var cap = document.getElementById('lightbox-cap');
+  var closeBtn = document.getElementById('lightbox-close');
+  function resolvePhoto(src){
+    if (!src) return src;
+    if (src.indexOf('data:') === 0) return src;
+    if (window.ZIGGY_PHOTOS && window.ZIGGY_PHOTOS[src]) return window.ZIGGY_PHOTOS[src];
+    return src;
+  }
+  function openLb(href, text, alt){
+    img.src = resolvePhoto(href);
+    img.alt = alt || text || '';
+    cap.textContent = text || '';
+    box.classList.add('open');
+  }
+  function closeLb(){
+    box.classList.remove('open');
+    img.removeAttribute('src');
+  }
+  if (window.ZIGGY_PHOTOS) {
+    document.querySelectorAll('img').forEach(function(im){
+      var s = im.getAttribute('src');
+      if (s && s.indexOf('photos/') === 0) im.setAttribute('src', resolvePhoto(s));
+    });
+  }
+  document.querySelectorAll('a.zoom').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      var pic = a.querySelector('img');
+      var src = (pic && pic.src) ? pic.src : a.getAttribute('href');
+      openLb(src, a.getAttribute('data-cap') || '', pic ? pic.alt : '');
+    });
+  });
+  closeBtn.addEventListener('click', closeLb);
+  box.addEventListener('click', function(e){ if(e.target === box) closeLb(); });
+
+  var dish = document.getElementById('dish-modal');
+  var dishCard = document.getElementById('dish-card');
+  var dishClose = document.getElementById('dish-close');
+  var dishTitle = document.getElementById('dish-title');
+  var dishPrice = document.getElementById('dish-price');
+  var dishBlurb = document.getElementById('dish-blurb');
+  var dishCaveat = document.getElementById('dish-caveat');
+  var dishMedia = document.getElementById('dish-media');
+  var placeholderTpl = document.getElementById('dish-placeholder-tpl');
+  var lastDishBtn = null;
+
+  function closeDish(){
+    if (!dish.classList.contains('open')) return;
+    dish.classList.remove('open');
+    dish.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    dishMedia.innerHTML = '';
+    if (lastDishBtn) lastDishBtn.focus();
+    lastDishBtn = null;
+  }
+
+  function openDish(btn){
+    lastDishBtn = btn;
+    var name = (btn.querySelector('.name') || {}).textContent || '';
+    var price = (btn.querySelector('.price') || {}).textContent || '';
+    dishTitle.textContent = name;
+    dishPrice.textContent = price;
+    dishBlurb.textContent = btn.getAttribute('data-blurb') || '';
+    var caveat = btn.getAttribute('data-caveat') || '';
+    if (caveat) {
+      dishCaveat.textContent = caveat;
+      dishCaveat.hidden = false;
+    } else {
+      dishCaveat.textContent = '';
+      dishCaveat.hidden = true;
+    }
+    var photos = (btn.getAttribute('data-photos') || '').split('|').filter(Boolean);
+    var alts = (btn.getAttribute('data-alts') || '').split('|');
+    dishMedia.innerHTML = '';
+    if (photos.length) {
+      photos.forEach(function(src, i){
+        var im = document.createElement('img');
+        im.src = resolvePhoto(src);
+        im.alt = alts[i] || (name + " at Ziggy's Cafe");
+        dishMedia.appendChild(im);
+      });
+    } else if (placeholderTpl) {
+      dishMedia.appendChild(placeholderTpl.content.cloneNode(true));
+    }
+    dish.classList.add('open');
+    dish.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    dish.scrollTop = 0;
+    dishCard.scrollTop = 0;
+    dishClose.focus();
+  }
+
+  document.querySelectorAll('button.menu-item').forEach(function(btn){
+    btn.addEventListener('click', function(){ openDish(btn); });
+  });
+  dishClose.addEventListener('click', function(e){ e.stopPropagation(); closeDish(); });
+  dish.addEventListener('click', function(e){ if (e.target === dish) closeDish(); });
+  dishCard.addEventListener('click', function(e){ e.stopPropagation(); });
+
+  function focusables(){
+    return Array.prototype.filter.call(
+      dish.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'),
+      function(el){ return !el.disabled && el.offsetParent !== null; }
+    );
+  }
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') {
+      if (dish.classList.contains('open')) { e.preventDefault(); closeDish(); return; }
+      if (box.classList.contains('open')) closeLb();
+      return;
+    }
+    if (e.key === 'Tab' && dish.classList.contains('open')) {
+      var list = focusables();
+      if (!list.length) { e.preventDefault(); return; }
+      var first = list[0], last = list[list.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+})();
+</script>
+</body>
+</html>
